@@ -37,6 +37,8 @@ public class Message {
     private String lastRead;
     @JsonProperty("unread_count")
     private int unreadCount;
+    @JsonProperty("as_user")
+    private boolean asUser;
 
     public Message() {
     }
@@ -179,6 +181,14 @@ public class Message {
 
     public void setUnreadCount(int unreadCount) {
         this.unreadCount = unreadCount;
+    }
+    
+    public boolean isAsUser() {
+        return asUser;
+    }
+
+    public void setUnreadCount(boolean asUser) {
+        this.asUSer = asUser;
     }
 
     public String toJSONString() throws JsonProcessingException {
